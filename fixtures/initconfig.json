@@ -1,0 +1,16 @@
+[
+  {
+    "model": "remoteinstrapp.config",
+    "pk": 1,
+    "fields": {
+      "countryId": "none",
+      "appId": "none",
+      "defaultBackend": "@py",
+      "broker": "django://",
+      "backend": "db+mysql://ebd:ebd@localhost/djangodatabase",
+      "dataFormat": "json",
+      "timezone": "Europe/Madrid"
+    }
+  }
+]
+

@@ -1,0 +1,234 @@
+{
+    "commands": [
+        {
+            "id": "query",
+            "description": "Consulta textual a un dispositivo",
+            "method": "pyvisa.resources.MessageBasedResource.query",
+            "args": 
+            [
+                {
+                    "name": "message",
+                    "description": "Mensaje a enviar al instrumento",
+                    "mandatory": true,
+                    "value": "string"
+                },
+                {
+                    "name": "delay",
+                    "description": "Retraso hasta el envio al instrumento, en segundos, de tipo float",
+                    "mandatory": false,
+                    "value": 0
+                },
+                {
+                    "name": "visaAttributes",
+                    "description": "Array de parametros VISA a configurar unicamente durate la ejecucion del metodo",
+                    "mandatory": false,
+                    "value": "array[string]"
+                },
+                {
+                    "name": "lock",
+                    "description": "Metodo de reserva a usar en la ejecucion",
+                    "mandatory": false,
+                    "value": "lock,lock_context,lock_excl"
+                }
+            ]
+        },
+        {
+            "id": "read",
+            "description": "Lectura de una linea de informacion textual de un instrumento",
+            "method": "pyvisa.resources.MessageBasedResource.read",
+            "args": 
+            [
+                {
+                    "name": "termination",
+                    "description": "Cadena de terminacion de la linea leida",
+                    "mandatory": false,
+                    "value": "\r\n"
+                },
+                {
+                    "name": "encoding",
+                    "description": "Codificacion de caracteres utilizada en la lectura",
+                    "mandatory": false,
+                    "value": "ascii"
+                },
+                {
+                    "name": "visaAttributes",
+                    "description": "Array de parametros VISA a configurar unicamente durate la ejecucion del metodo",
+                    "mandatory": false,
+                    "value": "array[string]"
+                },
+                {
+                    "name": "lock",
+                    "description": "Metodo de reserva a usar en la ejecucion",
+                    "mandatory": false,
+                    "value": "lock,lock_context,lock_excl"
+                }
+            ]
+        },
+        {
+            "id": "write",
+            "description": "Escritura de una linea de informacion textual en un instrumento",
+            "method": "pyvisa.resources.MessageBasedResource.write",
+            "args": 
+            [
+                {
+                    "name": "message",
+                    "description": "Mensaje a enviar al instrumento",
+                    "mandatory": true,
+                    "value": "string"
+                },
+                {
+                    "name": "termination",
+                    "description": "Cadena de terminacion de la linea leida",
+                    "mandatory": false,
+                    "value": "\r\n"
+                },
+                {
+                    "name": "encoding",
+                    "description": "Codificacion de caracteres utilizada en la lectura",
+                    "mandatory": false,
+                    "value": "ascii"
+                },
+                {
+                    "name": "visaAttributes",
+                    "description": "Array de parametros VISA a configurar unicamente durate la ejecucion del metodo",
+                    "mandatory": false,
+                    "value": "array[string]"
+                },
+                {
+                    "name": "lock",
+                    "description": "Metodo de reserva a usar en la ejecucion",
+                    "mandatory": false,
+                    "value": "lock,lock_context,lock_excl"
+                }
+            ]
+        },
+        {
+            "id": "query_raw",
+            "description": "Consulta binaria a un dispositivo",
+            "method": "pyvisa.resources.MessageBasedResource.write_raw,pyvisa.resources.MessageBasedResource.read_raw",
+            "args": 
+            [
+                {
+                    "name": "message",
+                    "description": "Mensaje a enviar al instrumento",
+                    "mandatory": true,
+                    "value": "string"
+                },
+                {
+                    "name": "size",
+                    "description": "Numero de bytes a leer",
+                    "mandatory": false,
+                    "value": 20480
+                },
+                {
+                    "name": "delay",
+                    "description": "Retraso hasta el envio al instrumento, en segundos, de tipo float",
+                    "mandatory": false,
+                    "value": 0
+                },
+                {
+                    "name": "visaAttributes",
+                    "description": "Array de parametros VISA a configurar unicamente durate la ejecucion del metodo",
+                    "mandatory": false,
+                    "value": "array[string]"
+                },
+                {
+                    "name": "lock",
+                    "description": "Metodo de reserva a usar en la ejecucion",
+                    "mandatory": false,
+                    "value": "lock,lock_context,lock_excl"
+                }
+            ]
+        },
+        {
+            "id": "read_raw",
+            "description": "Lectura de un conjunto de datos binario de un dispositivo",
+            "method": "pyvisa.resources.MessageBasedResource.read_raw",
+            "args": 
+            [
+                {
+                    "name": "size",
+                    "description": "Numero de bytes a leer",
+                    "mandatory": false,
+                    "value": 20480
+                },
+                {
+                    "name": "delay",
+                    "description": "Retraso hasta el envio al instrumento, en segundos, de tipo float",
+                    "mandatory": false,
+                    "value": 0
+                },
+                {
+                    "name": "visaAttributes",
+                    "description": "Array de parametros VISA a configurar unicamente durate la ejecucion del metodo",
+                    "mandatory": false,
+                    "value": "array[string]"
+                },
+                {
+                    "name": "lock",
+                    "description": "Metodo de reserva a usar en la ejecucion",
+                    "mandatory": false,
+                    "value": "lock,lock_context,lock_excl"
+                }
+            ]
+        },
+        {
+            "id": "write_raw",
+            "description": "Escritura de un conjunto de datos binario en un dispositivo",
+            "method": "pyvisa.resources.MessageBasedResource.write_raw",
+            "args": 
+            [
+                {
+                    "name": "message",
+                    "description": "Mensaje a enviar al instrumento",
+                    "mandatory": true,
+                    "value": "string"
+                },
+                {
+                    "name": "delay",
+                    "description": "Retraso hasta el envio al instrumento, en segundos, de tipo float",
+                    "mandatory": false,
+                    "value": 0
+                },
+                {
+                    "name": "visaAttributes",
+                    "description": "Array de parametros VISA a configurar unicamente durate la ejecucion del metodo",
+                    "mandatory": false,
+                    "value": "array[string]"
+                },
+                {
+                    "name": "lock",
+                    "description": "Metodo de reserva a usar en la ejecucion",
+                    "mandatory": false,
+                    "value": "lock,lock_context,lock_excl"
+                }
+            ]
+        },
+        {
+            "id": "get_visa_attribute",
+            "description": "Escritura de un conjunto de datos binario en un dispositivo",
+            "method": "pyvisa.resources.Resource.get_visa_attribute",
+            "args": 
+            [
+                {
+                    "name": "name",
+                    "description": "Nombre del atributo VISA a consultar",
+                    "mandatory": true,
+                    "value": "string"
+                },
+                {
+                    "name": "visaAttributes",
+                    "description": "Array de parametros VISA a configurar unicamente durate la ejecucion del metodo",
+                    "mandatory": false,
+                    "value": "array[string]"
+                },
+                {
+                    "name": "lock",
+                    "description": "Metodo de reserva a usar en la ejecucion",
+                    "mandatory": false,
+                    "value": "lock,lock_context,lock_excl"
+                }
+            ]
+        }
+    ]
+}
